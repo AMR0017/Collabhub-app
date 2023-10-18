@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_white"
+    tools:context=".ui.signup.SignUpActivity">
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="64dp"
+        android:fontFamily="@font/open_sans_bold"
+        android:gravity="top"
+        android:text="Sign Up"
+        android:textColor="@color/primary_blue"
+        android:textSize="32sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/username_layoutEdt"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="16dp"
+        app:boxBackgroundColor="#F5F5F5"
+        app:boxCornerRadiusBottomEnd="10sp"
+        app:boxCornerRadiusBottomStart="10sp"
+        app:boxCornerRadiusTopEnd="10sp"
+        app:boxCornerRadiusTopStart="10sp"
+        app:boxStrokeColor="@color/primary_blue"
+        app:boxStrokeErrorColor="@color/secondary_red"
+        app:boxStrokeWidth="2dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView4"
+        app:startIconDrawable="@drawable/fluent_person_28_regular">
+
+        <EditText
+            android:id="@+id/username_edt"
+            android:layout_width="match_parent"
+            android:layout_height="64dp"
+            android:fontFamily="@font/open_sans"
+            android:hint="Username"
+            android:inputType="text"
+            android:textColor="@color/text_color"
+            android:textColorHint="@color/edt_text_color" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/login_layoutEdt"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="16dp"
+        app:boxBackgroundColor="#F5F5F5"
+        app:boxCornerRadiusBottomEnd="10sp"
+        app:boxCornerRadiusBottomStart="10sp"
+        app:boxCornerRadiusTopEnd="10sp"
+        app:boxCornerRadiusTopStart="10sp"
+        app:boxStrokeColor="@color/primary_blue"
+        app:boxStrokeErrorColor="@color/secondary_red"
+        app:boxStrokeWidth="2dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/username_layoutEdt"
+        app:startIconDrawable="@drawable/baseline_mail_outline_24">
+
+        <com.example.sistem_terdistribusi_a3a4.utils.edittext.CustomEmail
+            android:id="@+id/email_edt"
+            android:layout_width="match_parent"
+            android:layout_height="64dp"
+            android:fontFamily="@font/open_sans"
+            android:hint="Email"
+            android:inputType="textEmailAddress"
+            android:textColor="@color/text_color"
+            android:textColorHint="@color/edt_text_color" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/password_layoutEdt"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        app:boxBackgroundColor="#F5F5F5"
+        app:boxCornerRadiusBottomEnd="10sp"
+        app:boxCornerRadiusBottomStart="10sp"
+        app:boxCornerRadiusTopEnd="10sp"
+        app:boxCornerRadiusTopStart="10sp"
+        app:boxStrokeColor="@color/primary_blue"
+        app:boxStrokeErrorColor="@color/secondary_red"
+        app:boxStrokeWidth="2dp"
+        app:endIconMode="password_toggle"
+        app:layout_constraintEnd_toEndOf="@+id/login_layoutEdt"
+        app:layout_constraintStart_toStartOf="@+id/login_layoutEdt"
+        app:layout_constraintTop_toBottomOf="@+id/login_layoutEdt"
+        app:startIconDrawable="@drawable/solar_lock_password_outline">
+
+        <com.example.sistem_terdistribusi_a3a4.utils.edittext.CustomPassword
+            android:id="@+id/password_edt"
+            android:layout_width="match_parent"
+            android:layout_height="64dp"
+            android:fontFamily="@font/open_sans"
+            android:hint="Password"
+            android:inputType="textPassword"
+            android:textColor="@color/text_color"
+            android:textColorHint="@color/edt_text_color" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/confirm_password_layoutEdt"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        app:boxBackgroundColor="#F5F5F5"
+        app:boxCornerRadiusBottomEnd="10sp"
+        app:boxCornerRadiusBottomStart="10sp"
+        app:boxCornerRadiusTopEnd="10sp"
+        app:boxCornerRadiusTopStart="10sp"
+        app:boxStrokeColor="@color/primary_blue"
+        app:boxStrokeErrorColor="@color/secondary_red"
+        app:boxStrokeWidth="2dp"
+        app:endIconMode="password_toggle"
+        app:layout_constraintEnd_toEndOf="@+id/login_layoutEdt"
+        app:layout_constraintStart_toStartOf="@+id/login_layoutEdt"
+        app:layout_constraintTop_toBottomOf="@+id/password_layoutEdt"
+        app:startIconDrawable="@drawable/solar_lock_password_outline">
+
+        <EditText
+            android:id="@+id/ConfirmPassword_edt"
+            android:layout_width="match_parent"
+            android:layout_height="64dp"
+            android:fontFamily="@font/open_sans"
+            android:hint="Password"
+            android:inputType="textPassword"
+            android:textColor="@color/text_color"
+            android:textColorHint="@color/edt_text_color" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <Button
+        android:id="@+id/button_signup"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="64dp"
+        android:text="Sign Up"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:cornerRadius="10dp"
+        app:layout_constraintEnd_toEndOf="@+id/confirm_password_layoutEdt"
+        app:layout_constraintStart_toStartOf="@+id/confirm_password_layoutEdt"
+        app:layout_constraintTop_toBottomOf="@+id/confirm_password_layoutEdt" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:gravity="center_vertical"
+        app:layout_constraintEnd_toEndOf="@+id/button_signup"
+        app:layout_constraintStart_toStartOf="@+id/button_signup"
+        app:layout_constraintTop_toBottomOf="@+id/button_signup">
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Already have an Account?"
+            android:fontFamily="@font/open_sans"
+            android:textColor="@color/text_color"
+            android:textSize="14sp"/>
+
+        <TextView
+            android:id="@+id/backToLogin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:text="Login"
+            android:fontFamily="@font/open_sans"
+            android:textColor="@color/primary_blue"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

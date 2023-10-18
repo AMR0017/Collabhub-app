@@ -14,7 +14,7 @@
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="54dp"
+        android:layout_marginTop="64dp"
         android:layout_marginEnd="16dp"
         android:src="@drawable/rafiki"
         app:layout_constraintEnd_toEndOf="parent"
@@ -43,7 +43,7 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="32dp"
         android:layout_marginEnd="16dp"
         app:boxBackgroundColor="#F5F5F5"
         app:boxCornerRadiusBottomEnd="10sp"
@@ -102,7 +102,7 @@
     </com.google.android.material.textfield.TextInputLayout>
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/forgot_password"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
@@ -119,16 +119,16 @@
         android:layout_width="0dp"
         android:layout_height="50dp"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="44dp"
         android:layout_marginEnd="16dp"
         android:fontFamily="@font/open_sans_bold"
         android:text="Login"
         android:textSize="16sp"
         android:textStyle="bold"
         app:cornerRadius="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+        app:layout_constraintTop_toBottomOf="@+id/forgot_password" />
 
 
     <LinearLayout
@@ -150,6 +150,7 @@
             android:textSize="14sp"/>
 
         <TextView
+            android:id="@+id/GoToSignUp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="4dp"
