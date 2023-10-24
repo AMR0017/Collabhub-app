@@ -6,6 +6,7 @@ import android.os.Bundle
 import com.example.sistem_terdistribusi_a3a4.MainActivity
 import com.example.sistem_terdistribusi_a3a4.R
 import com.example.sistem_terdistribusi_a3a4.databinding.ActivityOnboardingBinding
+import com.example.sistem_terdistribusi_a3a4.ui.homepage.HomepageActivity
 import com.example.sistem_terdistribusi_a3a4.ui.login.LoginActivity
 import com.example.sistem_terdistribusi_a3a4.ui.signup.SignUpActivity
 import com.google.firebase.auth.FirebaseAuth
@@ -22,7 +23,7 @@ class OnboardingActivity : AppCompatActivity() {
 
         mAuth = FirebaseAuth.getInstance()
         if (mAuth.currentUser!=null){
-            val intent = Intent(this, MainActivity::class.java)
+            val intent = Intent(this, HomepageActivity::class.java)
             startActivity(intent)
             finish()
         }

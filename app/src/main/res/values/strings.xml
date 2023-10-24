@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">sistem-terdistribusi-a3a4</string>
+    <string-array name="gender_item">
+        <item>He</item>
+        <item>She</item>
+        <item>Prefer not to say</item>
+    </string-array>
 </resources>
