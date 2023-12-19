@@ -14,19 +14,10 @@ import com.google.firebase.auth.FirebaseAuth
 class OnboardingActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityOnboardingBinding
-
-    private lateinit var mAuth: FirebaseAuth
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityOnboardingBinding.inflate(layoutInflater)
         setContentView(binding.root)
-
-        mAuth = FirebaseAuth.getInstance()
-        if (mAuth.currentUser!=null){
-            val intent = Intent(this, HomepageActivity::class.java)
-            startActivity(intent)
-            finish()
-        }
 
         binding.buttonLogin.setOnClickListener {
             val intent = Intent(this@OnboardingActivity, LoginActivity::class.java)
