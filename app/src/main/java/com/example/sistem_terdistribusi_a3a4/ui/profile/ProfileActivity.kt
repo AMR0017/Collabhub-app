@@ -10,6 +10,7 @@ import com.bumptech.glide.Glide
 import com.example.sistem_terdistribusi_a3a4.R
 import com.example.sistem_terdistribusi_a3a4.databinding.ActivityProfileBinding
 import com.example.sistem_terdistribusi_a3a4.ui.onboarding.OnboardingActivity
+import com.example.sistem_terdistribusi_a3a4.ui.profile.subprofile.ChangePasswordActivity
 import com.example.sistem_terdistribusi_a3a4.ui.profile.subprofile.EditProfileActivity
 import com.google.android.material.bottomsheet.BottomSheetDialog
 import com.google.firebase.auth.FirebaseAuth
@@ -82,6 +83,17 @@ class ProfileActivity : AppCompatActivity() {
         binding.editProfile.setOnClickListener {
             val intent =  Intent(this, EditProfileActivity::class.java)
             startActivity(intent)
+        }
+
+        binding.changePass.setOnClickListener {
+            val intent =  Intent(this, ChangePasswordActivity::class.java)
+            startActivity(intent)
+        }
+        binding.policy.setOnClickListener {
+            Toast.makeText(this, "This feature does not implemented yet", Toast.LENGTH_SHORT).show()
+        }
+        binding.helpCenter.setOnClickListener {
+            Toast.makeText(this, "This feature does not implemented yet", Toast.LENGTH_SHORT).show()
         }
     }
     override fun onSupportNavigateUp(): Boolean {

@@ -38,10 +38,10 @@ class EditProfileActivity : AppCompatActivity() {
                 .setSelection(MaterialDatePicker.todayInUtcMilliseconds())
                 .build()
 
-        datePIcker.addOnPositiveButtonClickListener(MaterialPickerOnPositiveButtonClickListener {
+        datePIcker.addOnPositiveButtonClickListener {
             val sdf = SimpleDateFormat("dd/MM/yyyy")
             binding.DoBEdt.setText(sdf.format(it))
-        })
+        }
 
 
 

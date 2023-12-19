@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_white"
+    tools:context=".ui.createTask.CreateTaskActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/background_white"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/open_sans_bold"
+            android:layout_marginEnd="30dp"
+            android:text="Create Task"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+    </androidx.appcompat.widget.Toolbar>
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/open_sans"
+        android:text="Task Name"
+        android:textColor="@color/primary_blue"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/taskName_layoutEdt"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        app:boxBackgroundColor="#F5F5F5"
+        app:boxCornerRadiusBottomEnd="10sp"
+        app:boxCornerRadiusBottomStart="10sp"
+        app:boxCornerRadiusTopEnd="10sp"
+        app:boxCornerRadiusTopStart="10sp"
+        app:boxStrokeColor="@color/primary_blue"
+        app:boxStrokeErrorColor="@color/secondary_red"
+        app:boxStrokeWidth="2dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/textView8"
+        app:layout_constraintTop_toBottomOf="@+id/textView8">
+
+        <EditText
+            android:id="@+id/taskname_edt"
+            android:layout_width="match_parent"
+            android:layout_height="64dp"
+            android:fontFamily="@font/open_sans"
+            android:hint="Enter Task Name"
+            android:inputType="text"
+            android:textColor="@color/text_color"
+            android:textColorHint="@color/edt_text_color" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:id="@+id/textView9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/open_sans"
+        android:text="Start Date"
+        android:textColor="@color/primary_blue"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/taskName_layoutEdt" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/startDate_layoutEdt"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        app:boxBackgroundColor="#F5F5F5"
+        app:boxCornerRadiusBottomEnd="10sp"
+        app:boxCornerRadiusBottomStart="10sp"
+        app:boxCornerRadiusTopEnd="10sp"
+        app:boxCornerRadiusTopStart="10sp"
+        app:boxStrokeColor="@color/primary_blue"
+        app:boxStrokeErrorColor="@color/secondary_red"
+        app:boxStrokeWidth="2dp"
+        app:endIconDrawable="@drawable/baseline_date_range_24"
+        app:endIconMode="custom"
+        app:layout_constraintEnd_toEndOf="@+id/taskName_layoutEdt"
+        app:layout_constraintStart_toStartOf="@+id/textView9"
+        app:layout_constraintTop_toBottomOf="@+id/textView9">
+
+        <EditText
+            android:id="@+id/startDate_edt"
+            android:layout_width="match_parent"
+            android:layout_height="64dp"
+            android:clickable="false"
+            android:focusable="false"
+            android:fontFamily="@font/open_sans"
+            android:hint="DD/MM/YYYY"
+            android:inputType="none"
+            android:textColor="@color/text_color"
+            android:textColorHint="@color/edt_text_color" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:id="@+id/textView10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/open_sans"
+        android:text="End Date"
+        android:textColor="@color/primary_blue"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/startDate_layoutEdt" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/endDate_layoutEdt"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        app:boxBackgroundColor="#F5F5F5"
+        app:boxCornerRadiusBottomEnd="10sp"
+        app:boxCornerRadiusBottomStart="10sp"
+        app:boxCornerRadiusTopEnd="10sp"
+        app:boxCornerRadiusTopStart="10sp"
+        app:boxStrokeColor="@color/primary_blue"
+        app:boxStrokeErrorColor="@color/secondary_red"
+        app:boxStrokeWidth="2dp"
+        app:endIconDrawable="@drawable/baseline_date_range_24"
+        app:endIconMode="custom"
+        app:layout_constraintEnd_toEndOf="@+id/taskName_layoutEdt"
+        app:layout_constraintStart_toStartOf="@+id/textView9"
+        app:layout_constraintTop_toBottomOf="@+id/textView10">
+
+        <EditText
+            android:id="@+id/endDate_edt"
+            android:layout_width="match_parent"
+            android:layout_height="64dp"
+            android:fontFamily="@font/open_sans"
+            android:clickable="false"
+            android:focusable="false"
+            android:hint="DD/MM/YYYY"
+            android:inputType="none"
+            android:textColor="@color/text_color"
+            android:textColorHint="@color/edt_text_color" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+<!--    <TextView-->
+<!--        android:id="@+id/textView11"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginStart="16dp"-->
+<!--        android:layout_marginTop="8dp"-->
+<!--        android:fontFamily="@font/open_sans"-->
+<!--        android:text="Assign To"-->
+<!--        android:textColor="@color/primary_blue"-->
+<!--        android:textSize="14sp"-->
+<!--        android:textStyle="bold"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/endDate_layoutEdt" />-->
+
+<!--    <com.google.android.material.textfield.TextInputLayout-->
+<!--        android:id="@+id/assignee_layoutEdt"-->
+<!--        android:layout_width="0dp"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginTop="8dp"-->
+<!--        app:boxBackgroundColor="#F5F5F5"-->
+<!--        app:boxCornerRadiusBottomEnd="10sp"-->
+<!--        app:boxCornerRadiusBottomStart="10sp"-->
+<!--        app:boxCornerRadiusTopEnd="10sp"-->
+<!--        app:boxCornerRadiusTopStart="10sp"-->
+<!--        app:boxStrokeColor="@color/primary_blue"-->
+<!--        app:boxStrokeErrorColor="@color/secondary_red"-->
+<!--        app:boxStrokeWidth="2dp"-->
+<!--        app:endIconMode="dropdown_menu"-->
+<!--        android:focusable="false"-->
+<!--        app:layout_constraintEnd_toEndOf="@+id/taskName_layoutEdt"-->
+<!--        app:layout_constraintStart_toStartOf="@+id/textView9"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/textView11">-->
+
+<!--        <MultiAutoCompleteTextView-->
+<!--            android:id="@+id/multiAutoCompleteAssignees"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="64dp"-->
+<!--            android:fontFamily="@font/open_sans"-->
+<!--            android:hint="Assignees"-->
+<!--            android:focusable="false"-->
+<!--            android:inputType="none"-->
+<!--            android:padding="10dp"-->
+<!--            android:textColor="@color/text_color"-->
+<!--            android:textColorHint="@color/edt_text_color" />-->
+<!--    </com.google.android.material.textfield.TextInputLayout>-->
+
+    <Button
+        android:id="@+id/createTaskBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="24dp"
+        app:cornerRadius="10dp"
+        android:text="Create Task"
+        android:textColor="@color/background_white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

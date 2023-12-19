@@ -9,23 +9,44 @@
     android:padding="10dp"
     android:layout_height="wrap_content">
 
-    <TextView
-        android:fontFamily="@font/open_sans_bold"
-        android:textSize="24sp"
-        android:textColor="@color/secondary_red"
+    <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Logout"/>
+        android:orientation="horizontal">
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/invCode_layoutEdt"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            app:boxBackgroundColor="#F5F5F5"
+            android:layout_gravity="center"
+            android:padding="10dp"
+            app:boxCornerRadiusBottomEnd="10sp"
+            app:boxCornerRadiusBottomStart="10sp"
+            app:boxCornerRadiusTopEnd="10sp"
+            app:boxCornerRadiusTopStart="10sp"
+            app:boxStrokeColor="@color/primary_blue"
+            app:boxStrokeErrorColor="@color/secondary_red"
+            app:boxStrokeWidth="2dp">
 
-    <TextView
-        android:layout_marginTop="24dp"
-        android:layout_marginBottom="24dp"
-        android:fontFamily="@font/open_sans"
-        android:textSize="18sp"
-        android:textColor="@color/black"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Are you sure you want to Logout?"/>
+            <EditText
+                android:id="@+id/invCodeEdt"
+                android:layout_width="match_parent"
+                android:layout_height="64dp"
+                android:fontFamily="@font/open_sans"
+                android:hint="Enter Invite Code"
+                android:inputType="text"
+                android:textColor="@color/text_color"
+                android:textColorHint="@color/edt_text_color" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <ImageView
+            android:id="@+id/pasteBtn"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center"
+            android:src="@drawable/baseline_content_paste_24"/>
+    </LinearLayout>
+
 
     <LinearLayout
         android:layout_marginBottom="16dp"
@@ -38,8 +59,8 @@
         android:orientation="horizontal">
         <Button
             style="?attr/materialButtonOutlinedStyle"
-            android:id="@+id/btnBatal"
-            android:layout_width="130dp"
+            android:id="@+id/cancelJoinBtn"
+            android:layout_width="120dp"
             android:layout_height="50dp"
             android:layout_weight="1"
             android:text="Cancel"
@@ -53,14 +74,15 @@
             android:layout_height="match_parent"/>
 
         <Button
-            android:id="@+id/btnKeluar"
+            android:id="@+id/joinTeamBtn"
             android:layout_width="120dp"
             android:layout_height="50dp"
             android:layout_weight="1"
-            android:text="Yes, Logout"
+            android:text="Join Team"
             app:cornerRadius="10dp"
             android:textSize="16sp"
             android:textAllCaps="false"
             android:textColor="@color/white" />
     </LinearLayout>
+
 </LinearLayout>
