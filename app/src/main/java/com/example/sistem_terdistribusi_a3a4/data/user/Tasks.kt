@@ -8,4 +8,7 @@ data class Tasks (
     val taskStartDate: String,
     val taskEndDate: String,
     var taskIsComplete: Int = 0
-)
+){
+    // No-argument constructor required by Firebase
+    constructor() : this("", "", "", "", "", "", 0)
+}

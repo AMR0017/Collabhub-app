@@ -46,7 +46,6 @@ class HomepageActivity : AppCompatActivity() {
 
     private lateinit var teamsAdapter: TeamsAdapter
     private val teamList : MutableList<Teams> = ArrayList()
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityHomepageBinding.inflate(layoutInflater)
@@ -150,12 +149,12 @@ class HomepageActivity : AppCompatActivity() {
         newTeamButton.setOnClickListener {
             val intent = Intent(this, CreateTeamActivity::class.java)
             startActivity(intent)
-            dialog.dismiss()
+            dialog.dismiss() // Close the dialog when starting a new activity
         }
 
         joinTeamButton.setOnClickListener {
             showJoinTeamPopUpDialog()
-            dialog.dismiss()
+            dialog.dismiss() // Close the dialog when showing a toast
         }
 
         val window = dialog.window
@@ -217,12 +216,12 @@ class HomepageActivity : AppCompatActivity() {
                 }
 
             })
-            dialog.dismiss()
+            dialog.dismiss() // Close the dialog when starting a new activity
         }
 
 
         cancel.setOnClickListener {
-            dialog.dismiss()
+            dialog.dismiss() // Close the dialog when showing a toast
         }
 
         val window = dialog.window
@@ -236,6 +235,7 @@ class HomepageActivity : AppCompatActivity() {
 
     private fun handleDatabaseError(databaseError: DatabaseError) {
         if (auth.currentUser != null) {
+            // User is still authenticated, show the error
             val errorMessage: String = when (databaseError.code) {
                 DatabaseError.PERMISSION_DENIED -> {
                     "Permission denied. You don't have access to this data."
@@ -249,6 +249,7 @@ class HomepageActivity : AppCompatActivity() {
             }
             Toast.makeText(this@HomepageActivity, errorMessage, Toast.LENGTH_LONG).show()
 
+            // You can also log the error for debugging purposes
             Log.e("FirebaseDatabaseError", errorMessage)
         }
     }

@@ -38,17 +38,6 @@ class DetailTeamActivity : AppCompatActivity() {
     private lateinit var taskAdapter: TaskAdapter
     private var checkedTaskCount = 0
 
-
-    /*private val sharedPreferences: SharedPreferences by lazy {
-        getSharedPreferences("ProgressPrefs", Context.MODE_PRIVATE)
-    }
-
-    private var currentProgress: Int
-        get() = sharedPreferences.getInt("progress", 0)
-        set(value) {
-            sharedPreferences.edit().putInt("progress", value).apply()
-        }*/
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityDetailTeamBinding.inflate(layoutInflater)
@@ -86,11 +75,6 @@ class DetailTeamActivity : AppCompatActivity() {
             })
 
         }
-
-        /*binding.taskProgressBar.progress = currentProgress*/
-
-
-        /*println(currentProgress)*/
 
         binding.newTaskBtn.setOnClickListener {
             val intent = Intent(this@DetailTeamActivity, CreateTaskActivity::class.java)
@@ -156,7 +140,6 @@ class DetailTeamActivity : AppCompatActivity() {
         }
 
         binding.taskProgressBar.progress = progress
-        /*currentProgress = progress*/
         binding.progressPercent.text = "$progress %"
     }
 
